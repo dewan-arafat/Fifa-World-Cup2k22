@@ -16,7 +16,6 @@ main {
 
 .top-banner {
     width: 1321px;
-    /* height: 646px; */
     display: flex;
     background-color: black;
     border-radius: 30px;
@@ -29,8 +28,6 @@ main {
 
 .top-banner-text {
     width: 100%;
-    /* Width: 531px;
-    Height: 424px; */
     color: white;
     padding-left: 106px;
 }
@@ -43,11 +40,34 @@ main {
 }
 
 .top-banner-text p {
-    /* width: 506px;
-    height: 78px; */
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
+    margin-bottom: 40px;
+}
+
+#watch-button {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 20px 40px;
+    border-radius: 10px;
+
+}
+
+#watch-button:hover {
+    animation-name: bg-change;
+    animation-duration: 4s;
+}
+
+@keyframes bg-change {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: rgb(0, 174, 255);
+    }
 }
 
 .top-image img {
@@ -99,9 +119,30 @@ main {
     column-gap: 12px;
 }
 
+.blog-image {
+    background-color: #dcd8ee;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .blog-info {
     display: flex;
     justify-content: space-between;
+}
+
+.optional {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+.optional a {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 20px 40px;
+    border-radius: 10px;
+
 }
 
 footer {
@@ -144,12 +185,14 @@ footer h2 {
         border-radius: 30px;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 50px;
     }
 
     .top-banner-text {
         width: 100%;
         color: white;
         padding: 20px 10px;
+        text-align: center;
 
     }
 
@@ -169,6 +212,12 @@ footer h2 {
 
     }
 
+    #watch-button {
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
     .button-blog {
         display: flex;
         width: 1321px;
@@ -176,14 +225,231 @@ footer h2 {
         align-items: center;
     }
 
+    .fixed-button {
+        width: 312px;
+        height: 312px;
+        background: #161616;
+        border-radius: 10px;
+        margin-left: 0px;
+        margin-right: 0;
+        margin-bottom: 10px;
+
+
+    }
+
     .all-blogs {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 20px;
+        row-gap: 40px;
 
     }
 
     .footer-element a {
         display: block;
     }
+}
+
+/* for tablet */
+@media only screen and (min-width:480px) and (max-width:768px) {
+
+    .top-banner {
+        width: 100%;
+        display: flex;
+        background-color: black;
+        border-radius: 30px;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .top-banner-text {
+        width: 100%;
+        color: white;
+        padding: 20px 10px;
+        padding-left: 76px;
+
+    }
+
+    .top-banner-text h1 {
+        font-size: 40px;
+        line-height: 50px;
+        padding-top: 20px;
+        /* padding-left: 76px; */
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .top-banner-text p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+
+    }
+
+
+    #watch-button {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .top-image img {
+        padding-top: 75px;
+    }
+
+    .button-blog {
+        display: flex;
+        width: 1321px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fixed-button {
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        background: none;
+        display: flex;
+        border-radius: 10px;
+        /* margin-left: 0px;
+        margin-right: 0; */
+        margin-bottom: 10px;
+        margin-right: 0;
+
+    }
+
+    .fixed-button a {
+        height: 20px;
+        width: 150px;
+        text-decoration: none;
+        color: black;
+        padding: 20px 30px;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        margin: 35px 10px;
+    }
+
+    .all-blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+
+    }
+
+    .optional {
+        display: block;
+
+    }
+}
+
+
+
+/*------- fixture page style -----------*/
+.fixture-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#vs-text {
+    margin: 10px 10px;
+}
+
+.fixture-text {
+    text-align: center;
+}
+
+.all-fixture {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 34px;
+    column-gap: 24px;
+}
+
+.fixture {
+    background-color: #B9B9B9;
+    width: 252px;
+    height: 136.18px;
+    padding: 50px 30px;
+    border-radius: 5px;
+}
+
+/* media quirey for fixture page */
+@media only screen and (max-width:480px) {
+    .all-fixture {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 34px;
+        column-gap: 24px;
+    }
+
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+
+    .all-fixture {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 34px;
+        column-gap: 24px;
+    }
+
+}
+
+/* group table styles */
+.group-bg {
+    background: #8B1638;
+    border-radius: 5px;
+}
+
+.all-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.group {
+    width: 240px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.group h2 {
+    text-align: center;
+}
+
+.group ul {
+    margin: 0%;
+    padding: 0;
+}
+
+.group ul li {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* media query for group table */
+/* mobile device */
+@media only screen and (max-width:480px) {
+    .all-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* for tablet */
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .all-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
 }
