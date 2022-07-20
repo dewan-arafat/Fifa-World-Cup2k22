@@ -127,6 +127,7 @@ footer h2 {
     text-decoration: none;
     color: #B9B9B9;
     font-size: 16px;
+    padding: 15px;
 
 }
 
@@ -180,5 +181,9 @@ footer h2 {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
 
+    }
+
+    .footer-element a {
+        display: block;
     }
 }
