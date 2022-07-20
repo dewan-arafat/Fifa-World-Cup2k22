@@ -1,11 +1,3 @@
-.container {
-    width: 100%;
-    height: 646px;
-    background-color: black;
-    border-radius: 30px;
-    margin-bottom: 130px;
-}
-
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
@@ -15,16 +7,28 @@ body {
     background-color: #F3F1FF;
 }
 
-.top-banner {
-    /* width: 100%;
-    height: 646px; */
+header,
+main {
+    width: 100%;
     display: flex;
-    /* background-color: black;
-    border-radius: 30px; */
+    justify-content: center;
+}
 
+.top-banner {
+    width: 1321px;
+    /* height: 646px; */
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    margin-bottom: 130px;
+}
+
+.top-banner div {
+    width: 50%;
 }
 
 .top-banner-text {
+    width: 100%;
     /* Width: 531px;
     Height: 424px; */
     color: white;
@@ -47,7 +51,7 @@ body {
 }
 
 .top-image img {
-    height: 613px;
+    width: 90%;
     padding-top: 33px;
     padding-right: 79px;
     padding-left: 24px;
@@ -56,6 +60,7 @@ body {
 
 .button-blog {
     display: flex;
+    width: 1321px;
 }
 
 .blog-image img {
@@ -97,4 +102,83 @@ body {
 .blog-info {
     display: flex;
     justify-content: space-between;
+}
+
+footer {
+    background: #161616;
+    text-align: center;
+}
+
+footer h2 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    padding-top: 130px;
+
+}
+
+.footer-element {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-element a {
+    text-decoration: none;
+    color: #B9B9B9;
+    font-size: 16px;
+
+}
+
+
+/* media queries */
+
+/* mobile device */
+@media only screen and (max-width:480px) {
+
+    .top-banner {
+        width: 100%;
+        display: flex;
+        background-color: black;
+        border-radius: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-banner-text {
+        width: 100%;
+        color: white;
+        padding: 20px 10px;
+
+    }
+
+    .top-banner-text h1 {
+        font-size: 22px;
+        line-height: 33px;
+        padding-top: 20px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .top-banner-text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+
+    }
+
+    .button-blog {
+        display: flex;
+        width: 1321px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+
+    }
 }
